@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var employee1 = {firstName: "John", lastName: "Rodson"};
+        var employee2 = {firstName: "Jimmy",lastName: "Baily"};
+        function invite(greeting1, greeting2)
+        {
+            console.log(greeting1 + " " + this.firstName + " " + this.lastName + "," + greeting2);
+        }
+        invite.call(employee1,"Hello", "How are you?");
+        invite.call(employee2,"Hello", "How are you?");
+    </script>
+</body>
+</html>
